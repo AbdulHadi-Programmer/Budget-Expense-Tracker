@@ -90,9 +90,7 @@ while True:
         elif m_choice == 7: # Profit and Loss Calculation Function
             pass
         
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-#                     Businessman Categories Completed  
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
     elif user == 'Employee':
         print('\nEmployee Category:')
         # Now At First We Calculate Tax
@@ -121,9 +119,7 @@ while True:
             elif search == 2:
                 emp_manage_expenses() 
 
-        ################################################################
-        #     I AM WORKING ON ABOVE CATEGORY, CONTINUE FROM ABOVE      #
-        ################################################################
+        
     elif user == 'Student':
         search = int(input("\nEnter The Option:\n1) Manage Saving\n2) Manage Expenses\nEnter Input:- "))
         if search == 1: # Manage Saving
