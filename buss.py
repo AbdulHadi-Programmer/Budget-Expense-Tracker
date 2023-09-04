@@ -13,15 +13,8 @@ emp_salaries = {}  # Create an empty dictionary to store employee salaries  04
 total_payroll = 0 # Total emp salaries
 total_revenue = 0  # Placeholder for total revenue (You should implement this calculation)
 
-expense = {} # And 
+expense = {}
 total_expense = 0
-# Function To calculate net worth 
-def profit_and_loss_calculation(net_profit, total_expenses, total_revenue):
-    total_revenue = calculate_total_revenue()
-    total_expenses = calculate_total_expenses()
-    net_profit = total_revenue - total_expenses
-    return net_profit
-    
 
 # Function to update employee salaries  
 def update_employee_salaries():
