@@ -4,11 +4,12 @@ from buss import *
 
 
 print('Welcome to Budget Expense Manager'.center(100,' '))
-user = input("Enter Who You are Student, Employee, Businessman: ").capitalize()
+user = input("Enter who you are (Student, Employee, Businessman): ").capitalize()
+
 while True:
-    ## Business man Category Completed 
+    ## Business man Category 
     if user == 'Businessman':
-        m_choice = int(input("\nEnter The Option:\n1) Sales and Revenue Tracking Function\n2) Employee Salaries and Payroll Function\n3) Cash Flow Tracking Function\n4) Inventory Management Function\n5) Investment Tracking Function\n6) Expenses Tracking Function\nInput: "))
+        m_choice = int(input("\nEnter The Option:\n\n1) Sales and Revenue Tracking Function\n2) Employee Salaries and Payroll Function\n3) Cash Flow Tracking Function\n4) Inventory Management Function\n5) Investment Tracking Function\n6) Expenses Tracking Function\nInput: "))
         
         if m_choice == 1: # 'Sales and Revenue Tracking Function'
             print('\n*)Sales and Revenue Tracking Function')
@@ -20,10 +21,6 @@ while True:
                 calculate_total_revenue()   # You need to implement this function
             elif search == 3: # View Sales Records
                 view_sales_records()        # You need to implement this function
-            elif search == 4: # View Sales Records
-                net_profit = 0
-                profit_and_loss_calculation(net_profit, total_expenses, total_revenue)        # You need to implement this function
-            
             else:
                 break
             
@@ -87,17 +84,13 @@ while True:
             else:
                 break
                 
-        elif m_choice == 7: # Profit and Loss Calculation Function
-            pass
-        
-
+    # Employee Category 
     elif user == 'Employee':
         print('\nEmployee Category:')
         # Now At First We Calculate Tax
         if remaining_income == 0 :
             check()
-        else:
-            pass
+
         
         m_choice = int(input("\nEnter The Option:\n1) Saving Control and Budget Control\n2) Expenditure Oversight\nInput: "))
         if m_choice == 1: # Saving and Budget Control
@@ -112,14 +105,14 @@ while True:
             else:
                 break
         elif m_choice == 2: # Expenditure Oversight ( Expenses )
-            print('Expenditure Oversight:-')
+            print('\nExpenditure Oversight:-')
             search = int(input("\nEnter The Option:\n1) Income Manager\n2) Expenses Tracker\nInput: "))
             if search == 1:
                 employee_income_manager()
             elif search == 2:
                 emp_manage_expenses() 
 
-        
+    # Student Category
     elif user == 'Student':
         search = int(input("\nEnter The Option:\n1) Manage Saving\n2) Manage Expenses\nEnter Input:- "))
         if search == 1: # Manage Saving
@@ -130,4 +123,3 @@ while True:
             break
     else:
         print('Invalid Input')
-        break
