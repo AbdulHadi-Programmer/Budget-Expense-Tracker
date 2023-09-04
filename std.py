@@ -10,13 +10,12 @@ std_expense = {
 }
 std_total = sum(std_expense.values())
 
-## Expense 01
 def std_update_expenses():
     global std_total
     for category in std_expense:
         expense_amount = float(input(f"Enter the expense amount for {category}: "))
         std_expense[category] += expense_amount
-    std_total = sum(std_expense.values())  # Update the total expense here
+    std_total = sum(std_expense.values())
 
 def std_view_expense():
     global std_total
@@ -37,7 +36,6 @@ def std_manage_expenses():
     else:
         print("Invalid choice.")
         
-# Saving  02
 def std_manage_saving():
     global std_savings
     saving1 = int(input("Enter your Saving: "))
