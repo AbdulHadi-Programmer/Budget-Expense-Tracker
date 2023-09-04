@@ -49,28 +49,21 @@ def check():
 def monthly_budget():
     global m_budget ,remaining_income
     m_budget = int(input("Enter Your Monthly Budget: "))
-    print(f'Your Monthly Budget is: {m_budget}')
-    remaining_income  -= m_budget
-    print(f'Your Remaining Income is: {remaining_income}')
     return m_budget
 
 def emp_manage_savings():
     global saving, remaining_income
-    
     saving1 = int(input('Enter the Saving: '))
     remaining_income  -= saving1     # Calculate remaining_income
-    
     saving += saving1
     print(f'Your Current Saving Amount is: {saving}')
-    print(f'Your remaining income: {remaining_income}')
+
 
 def emp_update_expenses(emp_expense):
     global total, remaining_income
-    
     for category in emp_expense:
         expense_amount = float(input(f"Enter the expense amount for {category}: "))
         emp_expense[category] += expense_amount
-    
 
 def emp_view_expense(emp_expense):
     global total, remaining_income
@@ -86,10 +79,8 @@ def emp_manage_expenses():
     
     if user_choice == 0:
         emp_update_expenses(emp_expense)
-        #print(f"Remaining Income after subtracting Expenses Amount: {remaining_income}")
     elif user_choice == 1:
         emp_view_expense(emp_expense)
-        #print(f"Remaining Income after subtracting Expenses Amount: {remaining_income}")
     else:
         print("Invalid choice.")
 
@@ -98,23 +89,12 @@ def emp_manage_expenses():
 # # Other Functions 
 def employee_income_manager():
     global remaining_income, total
-    choice = input("Do you want to add/view employee income? (add/view/exit): ").lower()
+    choice = input("Do you want to add/exit employee income? (add/exit): ").lower()
 
     if choice == "add":
         income1 = int(input("Enter the New Income: "))
         remaining_income += income1
         print("Employee income added.")
-    elif choice == "view":
-        if total > 0:
-            print(f"The Employee's total expenses are: {total}")
-            remaining_after_expenses = remaining_income - total
-            print('Remaining Income After Expenses:',remaining_after_expenses)
-            if remaining_after_expenses < 0:
-                print("Warning: Expenses exceed income.")
-            else:
-                print(f"The Employee's remaining income after expenses: {remaining_after_expenses}")
-        else:
-            print(f"The Employee's income is: {remaining_income}")
     elif choice == "exit":
         print("Exiting employee income manager.")
     else:
