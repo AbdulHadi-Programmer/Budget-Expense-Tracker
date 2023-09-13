@@ -4,7 +4,15 @@ from buss import *
 
 
 print('Welcome to Budget Expense Manager'.center(100,' '))
-user = input("Enter who you are (Student, Employee, Businessman): ").capitalize()
+
+while True:
+    user = input("Enter who you are (Student, Employee, Businessman): ").capitalize()
+
+    # Check if the user input is valid
+    if user in ('Student', 'Employee', 'Businessman'):
+        break
+    else:
+        print('Invalid input. Please enter "Student", "Employee", or "Businessman".')
 
 while True:
     ## Business man Category 
@@ -121,5 +129,3 @@ while True:
             std_manage_expenses()
         else:
             break
-    else:
-        print('Invalid Input')
