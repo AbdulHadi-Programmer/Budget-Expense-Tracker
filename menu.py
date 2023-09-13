@@ -13,7 +13,7 @@ while True:
         
         if m_choice == 1: # 'Sales and Revenue Tracking Function'
             print('\n*)Sales and Revenue Tracking Function')
-            search = int(input("\nEnter The Option:\n1) Record Sales Transaction\n2) Calculate Total Revenue\n3) View Sales Records\n4) Profit and Loss Calculation\nInput: "))
+            search = int(input("\nEnter The Option:\n1) Record Sales Transaction\n2) Calculate Total Revenue\n3) View Sales Records\nInput: "))
             # Function Inside Category
             if search == 1: # Record Sales Transaction
                 record_sales_transaction()  # You need to implement this function
